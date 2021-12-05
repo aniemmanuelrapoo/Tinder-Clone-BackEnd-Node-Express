@@ -5,6 +5,7 @@ const Cors = require('cors')
 
 //app config
 const app = express();
+const port = process.env.PORT || 8001
 
 //middleware
 app.use(express.json())
@@ -40,3 +41,5 @@ app.get('/tinder/cards', (req, res) => {
         }
     });
 });
+
+app.listen(port, () => console.log(`Listing to locahost ${port}`))
