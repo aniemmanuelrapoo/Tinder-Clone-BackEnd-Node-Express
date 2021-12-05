@@ -18,9 +18,6 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((err) => console.log(err))
 
 //API Endpoints
-app.get('/', (req, res) => {
-    res.status(200).send("HELLO THIS IS RAPOO TESTING!!!");
-})
 app.post('/tinder/cards', (req, res) => {
     const dbCard = req.body;
     Cards.create(dbCard, (err, data) => {
